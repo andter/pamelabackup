@@ -1,6 +1,6 @@
+	$(function(){
 	var lastid;
 	var elementNum = 1;
-	$(function(){
 
 	var main = $('.main-photo');
 

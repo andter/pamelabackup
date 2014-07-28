@@ -11,6 +11,9 @@ function adminOpen(){
 	}
 }
 
-var admin = document.getElementById('adminArrow');
-admin.addEventListener("click", adminOpen, false);
+	if ($('adminArrow').length>0){
+		var admin = document.getElementById('adminArrow');
+		admin.addEventListener("click", adminOpen, false);
+	}
+
 });
