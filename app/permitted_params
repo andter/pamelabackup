@@ -1,0 +1,14 @@
+class PermittedParams = Struct.new(:params) do 
+	
+	def permitted
+		params.require(:user).permit(*user_attributes)
+	end
+
+private
+
+	def user_attributes
+		[ :name, :email, :phonenumber, :password_confirmation, :password, ]
+	end
+
+
+end

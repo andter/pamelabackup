@@ -1,0 +1,6 @@
+<h2> Messages </h2>
+<% @messages.each do |f| %>
+<h3><%= f.title%></h3>
+<%= f.content %>
+<%= link_to "Delete Message", message_path(f), :confirm => "Are you sure?", :method => :delete%>
+<% end %>

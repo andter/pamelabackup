@@ -1,0 +1,19 @@
+<h3>Signup!</h3>
+<%= form_for(@user) do |f| %>
+<%= f.label :name, "Name	*" %>
+<%= f.text_field :name%>
+
+<%= f.label :phonenumber, "Phone #" %>
+<%= f.text_field :phonenumber %>
+
+<%= f.label :email, "Email	*" %>
+<%= f.text_field :email%>
+
+<%= f.label :password, "Password	*" %>
+<%= f.password_field :password%>
+
+<%= f.label :password_confirmation, "Confirm	*" %>
+<%= f.password_field :password_confirmation%></br>
+
+<%= f.submit "Create Account"%>
+<% end %>

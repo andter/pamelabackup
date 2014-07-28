@@ -1,0 +1,15 @@
+<h3>Users Index</h3>
+<hr>
+<% @users.each do |f| %>
+<div class="row-fluid">
+<div class="span2">
+<%= f.email %>
+</div>
+<div class="span10">
+<%= link_to "Add Images", "" %> | 
+<%= link_to "Remove Images", "" %> |  
+<%= link_to "Delete User", user_registration_path, :method => :delete %> 
+</div>
+</div>
+<hr>
+<% end %>

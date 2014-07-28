@@ -1,0 +1,6 @@
+<h4>Image</h4>
+<%= (image_tag @image.image_url) %>
+<h4><%= @image.name%></h4>
+<%= @image.description%>
+</br>
+<%= link_to "Delete Image", "", :method => :delete %>

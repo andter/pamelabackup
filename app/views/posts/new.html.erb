@@ -1,0 +1,12 @@
+<h2>Add a new Post:</h2>
+<% if is_admin? %>
+<%= form_for @post do |f| %>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %></br>
+		<%= f.label :content %>
+		<%= f.text_area :content %></br>
+		<%= f.submit "Add Post" %>
+	</p>
+	<% end %>
+	<% end %>

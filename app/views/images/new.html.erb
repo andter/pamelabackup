@@ -1,0 +1,12 @@
+<h4>Add image to user </h4>
+<%= form_for [@user, @image] do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<%= f.label :image %>
+<%= f.file_field :image %>
+</br>
+<%= f.submit %>
+
+<% end %>

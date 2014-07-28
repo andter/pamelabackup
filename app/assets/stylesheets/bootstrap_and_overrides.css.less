@@ -1,0 +1,303 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('/assets/alexbrush-regular-webfont.eot');
+    src: url('/assets/alexbrush-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/alexbrush-regular-webfont.woff') format('woff'),
+         url('/assets/alexbrush-regular-webfont.ttf') format('truetype'),
+         url('/assets/alexbrush-regular-webfont.svg#alex_brushregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	background-color: #1A1A1A;
+}
+
+.myflash{
+	background-color: yellow;
+	text-align:center;
+	color:red;
+	animation-duration: 3s;
+	animation-name: slideout;
+}
+
+@keyframes slideout{
+	from{
+		margin-left: 100%;
+		width:300%;
+	}
+
+	to{
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+.xBtn{
+	padding: 0;
+}
+
+.xBtn:hover{
+	cursor:pointer;	
+}
+
+.top{
+	position:relative;
+}
+
+.right{
+	position:relative;
+	float:right;
+	background-color: #1A1A1A;
+	color: #FFFFFF;
+}
+
+.left{
+	float:left;
+	color: #FFFFFF;
+}
+
+.fancyheader{
+  font-family: 'alex_brushregular';
+	color: #FFFFFF;
+	font-size: 500%;
+	text-align: center;
+}
+
+.fancy{
+	font-family: 'alex_brushregular';
+	text-align: center;
+	color: #0CAEDC;
+	font-size:300%;
+}
+
+#navbar, #navbar ul{
+	top: 10px;
+	position: relative;
+	display: block;
+	color: #FFFFFF;
+	list-style: none;
+	font-size: 200%;
+	overflow:hidden;
+}
+
+a.adminLink{
+color: #FFFFFF;
+}
+
+a.bar{
+	background: -webkit-linear-gradient(#101010, #050505);
+	background: -o-linear-gradient(#101010, #050505);
+	background: -moz-linear-gradient(#101010, #050505);
+	background: linear-gradient(#101010, #050505);
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 2px 6px 2px 6px;
+	border: 1px solid rgb(0,0,0);
+}
+
+a.bar:hover{
+	background: -webkit-linear-gradient(#4476CC, #223388);
+	background: -o-linear-gradient(#4476CC, #223388);
+	background: -moz-linear-gradient(#4476CC, #223388);
+	background: linear-gradient(#4476CC, #223388);
+	color: #FFFFFF;
+	text-decoration:none; 
+	cursor:pointer;  
+}
+
+#navbar li{
+	float:left;
+	position: relative;
+	display:block;
+	padding: 10px 0px;
+	left:3%;
+}
+
+.gallery{
+	float:left;
+	padding: 1px;
+  border: 1px solid #000;
+}
+
+.admin{
+	background-color: #0CAEDC;
+	color: black;
+	text-align: center;
+	font-size: 200%;
+	padding: 10px;
+}
+
+.js .admin{
+	display:none;
+}
+
+.adminbtn{
+	text-decoration: none;
+	text-align: center;
+	font-size: 50%;
+	color: black;
+}
+
+table,th,td
+{
+	border:1px solid black;
+	border-collapse:collapse;
+}
+th,td
+{
+	padding:5px;
+}
+
+
+.main{
+	  position: relative;
+		border: 2px solid rgb(150,150,150);
+		padding: 10px;
+		width: 75%;
+		text-align: center;
+		margin: 0 auto;
+		background-color: #FFFFFF;
+}
+
+.space{
+padding-top:150%;
+}
+
+
+#leftArrow{
+width: 0px;
+height: 0px;
+margin: 0px;
+border-style: solid;
+border-width: 15px 40px 15px 0;
+border-color: transparent #247fe0 transparent transparent;
+line-height: 0px;
+_border-color: #000000 #247fe0 #000000 #000000;
+_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+#leftArrow:hover{
+	cursor:pointer;	
+	border-color: transparent #00078A transparent transparent;
+}
+
+#rightArrow{
+float: right;
+width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 15px 0 15px 40px;
+border-color: transparent transparent transparent #247fe0;
+line-height: 0px;
+_border-color: #000000 #000000 #000000 #247fe0;
+_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+#rightArrow:hover{
+	cursor:pointer;
+	border-color: transparent transparent transparent #00078A;
+}
+
+#adminArrow{
+float:right;
+width: 0px;
+height: 0px;
+margin: 0px;
+border-style: solid;
+border-width: 15px 40px 15px 0;
+border-color: transparent #247fe0 transparent transparent;
+line-height: 0px;
+_border-color: #000000 #247fe0 #000000 #000000;
+_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+#adminArrow:hover{
+	cursor:pointer;	
+	border-color: transparent #00078A transparent transparent;
+}
+
+.show{
+	display:inline;
+}
+.hidden{
+	display:none;
+}
+
+.dashbutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#1D1D1D;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.dashbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.dashbutton:active {
+	position:relative;
+	top:1px;
+}
+
