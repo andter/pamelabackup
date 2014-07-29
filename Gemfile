@@ -16,6 +16,7 @@ gem 'mysql2'
 gem 'carrierwave'
 gem 'bcrypt'
 gem 'mini_magick'
+gem 'fog'
 
 group :development do 
 gem "better_errors", "~> 0.0.0"

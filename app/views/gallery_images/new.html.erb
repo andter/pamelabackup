@@ -1,6 +1,6 @@
 <h3> Add an Image to Gallery </h3>
 <% if is_admin? %>
-<%= form_for @gimage do |f| %>
+<%= form_for @gimage, html: {multipart: true} do |f| %>
 <p>
 <%= f.label :name %>
 <%= f.text_field :name %>

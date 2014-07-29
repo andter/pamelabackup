@@ -11,6 +11,18 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+	def edit
+		@user = User.find(params[:id])
+	end
+
+	def update
+		if @user.update_attributes(params[:user])
+			render '/home', notice: "Updated User Successfully"
+		else 
+			render :back, notice: @user.errors.full_message
+		end
+	end
+
 	def create
 		@user = User.new(user_params)
 			if @user.save

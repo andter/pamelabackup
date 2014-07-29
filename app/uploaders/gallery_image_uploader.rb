@@ -1,19 +1,21 @@
 # encoding: utf-8
-
 class GalleryImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  #include CarrierWave::RMagick
+ include CarrierWave::MiniMagick
+ include CarrierWave::MimeTypes
+
+ require 'fog'
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  storage :fog
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "uploads/"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -36,6 +38,13 @@ class GalleryImageUploader < CarrierWave::Uploader::Base
 	 process :resize_to_fit => [50, 50]
   end
 
+	version :small_standard do
+		process resize_to_fit: [250, 250]
+	end
+	
+	version :standard do
+		process resize_to_fit: [500, 500]
+	end 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_white_list

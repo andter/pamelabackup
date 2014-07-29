@@ -23,12 +23,12 @@ def update
 end
 
 def create
-	@gimage = GalleryImage.new(gallery_params)
+	@gimage = GalleryImage.new
 	@gimage.name = params[:gallery_image][:name]
 	@gimage.description = params[:gallery_image][:description]
 	@gimage.image = params[:gallery_image][:image]
 	if @gimage.save
-		redirect_to "/home"
+		redirect_to "/home", notice: "Image saved"
 	else
 		render "new"
 	end

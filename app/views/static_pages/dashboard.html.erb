@@ -2,7 +2,7 @@
 <h4><%=current_user.email.capitalize%>'s Dashboard </h4>
 <%= link_to "My Pictures", user_images_path(current_user), class: "dashbutton"%>
 <%= link_to "My Messages", messages_path, class: "dashbutton"%>
-<%= link_to "Edit Profile", "", class: "dashbutton"%>
+<%= link_to "Edit Profile", edit_user_path(current_user), class: "dashbutton"%>
 <% else %>
 <h3>You are not logged in! </h3>
 <h4>Please Login or Signup before proceeding</h4>
