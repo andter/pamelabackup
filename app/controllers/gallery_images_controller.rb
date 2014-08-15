@@ -24,6 +24,9 @@ end
 
 def create
 	@gimage = GalleryImage.new
+	#binding.pry
+	#if @gimage.save
+	#	redirect_to "/home", notice: "Image saved"
 	@gimage.name = params[:gallery_image][:name]
 	@gimage.description = params[:gallery_image][:description]
 	@gimage.image = params[:gallery_image][:image]
@@ -32,7 +35,7 @@ def create
 	else
 		render "new"
 	end
-end
+	end
 
 def index
 	@mainImage = GalleryImage.first()
@@ -41,6 +44,6 @@ end
 
 private 
 		def gallery_params()
-			params.fetch(:galleryimage, {}).permit(:title, :description, :images)
+			params.fetch(:galleryimage, {}).permit(:title, :description, :image)
 		end
 end
