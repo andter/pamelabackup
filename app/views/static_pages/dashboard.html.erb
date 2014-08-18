@@ -1,6 +1,6 @@
 <% if current_user.present? %>
 <h4><%=current_user.email.capitalize%>'s Dashboard </h4>
-<%= link_to "My Pictures", user_images_path(current_user), class: "dashbutton"%>
+<%= link_to "My Pictures", user_photos_path(current_user), class: "dashbutton"%>
 <%= link_to "My Messages", messages_path, class: "dashbutton"%>
 <%= link_to "Edit Profile", edit_user_path(current_user), class: "dashbutton"%>
 <% else %>

@@ -4,6 +4,12 @@ class StaticPagesController < ApplicationController
 		@posts = Post.ordered_posts	
 	end
 
+	def gallery
+		@user = User.find_by_email("mommietofive@aol.com")
+		@mainImage = @user.photos.first
+		@images = @user.photos.all
+	end
+
 	def help
 	
 	end

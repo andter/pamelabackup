@@ -1,0 +1,36 @@
+<% if is_admin? %>
+<%= link_to "Add gallery Image" %>
+</br>
+<% end %>
+<div class="row-fluid">
+	<div class="span2">
+		<div class="space">
+		</div>
+		<div id="leftArrow">
+		</div>
+	</div>
+	<div class="span8">
+		<div class="main-photo">
+			<%= (image_tag @mainImage.image_url(:standard)) if @mainImage.present?%></br>
+		</div>
+	</div>
+	<div class="span2">
+		<div class="space">
+		</div>
+		<div id="rightArrow">
+		</div>
+	</div>
+</div>
+
+<div class="row-fluid">
+<div class="span2">
+</div>
+<div class="span8">
+<% @images.each do |image| %>
+<% if image.present? %>
+<%=  link_to (image_tag image.image_url(:thumb)), user_photo_path(@user.id, image), data:{id: image.id, remote: true}, class:"gallery" %>
+<% end %>
+<% end %>
+</div>
+<div class="span2">
+</div>

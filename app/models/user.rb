@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
  #        :recoverable, :rememberable, :trackable, :validatable
 	has_secure_password
 	has_many :messages
-	has_many :images
+	has_many :photos
 	validates_uniqueness_of :email
 
 	

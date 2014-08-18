@@ -1,0 +1,25 @@
+<% if @image.user_id != 1 %>
+<% unless current_user.nil? %>
+<% if current_user.admin == true || current_user.id == @image.user_id%>
+<h4>Image</h4>
+<%= (image_tag @image.image_url) %>
+<h4><%= @image.name%></h4>
+<%= @image.description%>
+</br>
+<%= link_to "Delete Image", "", :method => :delete %>
+<% else %>
+<h3>You do not have permission to view this photo</h3>
+<h5>If you believe this is in error, contact the administrator</h5>
+<% end %>
+<% else %>
+<h3>You are not logged in! </h3>
+<h4>Please Login or Signup before proceeding</h4>
+<%= link_to "Login", new_user_session_path %> |
+<%= link_to "Signup", new_user_path %>
+<% end %>
+<% else %>
+<h4>Image</h4>
+<div class="stuff">
+<%= (image_tag @image.image_url(:standard))%>
+</div>
+<% end %>

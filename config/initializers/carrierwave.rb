@@ -10,9 +10,9 @@ CarrierWave.configure do |config|
  
     # Configuration for Amazon S3
     :provider              => 'AWS',
-    :aws_access_key_id     => ENV['S3_KEY'],
-    :aws_secret_access_key => ENV['S3_SECRET'],
+    :aws_access_key_id     => 'AKIAJUKBE7BBZMFGUWUQ',
+    :aws_secret_access_key => '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',
   }
-	config.fog_directory    = ENV['S3_BUCKET_NAME']
+	config.fog_directory    = 'pbp-bucket'
 	config.storage = :fog
 end

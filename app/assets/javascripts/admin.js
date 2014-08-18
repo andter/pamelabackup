@@ -1,5 +1,6 @@
 $(function(){
 	var num = 0;
+
 function adminOpen(){
 	if (num == 0){
 		$('.admin').show();
