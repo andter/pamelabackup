@@ -5,7 +5,6 @@ Pamelabeckerphotography::Application.routes.draw do
   resources :posts
 	resources :sessions, only: [:create, :destroy]
   resources :messages
-	resources :gallery_images
   resources :users do
   resources :photos
   end
