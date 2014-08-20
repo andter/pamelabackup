@@ -12,7 +12,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'twitter-bootstrap-rails'
 gem "less-rails"
 gem "therubyracer"
-gem 'mysql2'
 gem 'carrierwave'
 gem 'bcrypt'
 gem 'mini_magick'
@@ -21,8 +20,6 @@ gem 'fog'
 group :development do 
 gem "better_errors", "~> 0.0.0"
 gem "binding_of_caller", "~> 0.7.2"
-gem "pry-rails", "~> 0.3.2"
-gem "pry-debugger", "~> 0.2.2"
 end
 
 #gem 'protected_attributes'

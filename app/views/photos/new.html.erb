@@ -1,4 +1,8 @@
+<% if (@user.id == 1) %>
+<h4>Post Image to Gallery</h4>
+<% else %>
 <h4>Add image to user </h4>
+<% end %>
 <%= form_for [@user, @image] do |f|%>
 <%= f.label :name %>
 <%= f.text_field :name %>

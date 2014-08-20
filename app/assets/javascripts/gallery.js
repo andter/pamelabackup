@@ -30,7 +30,7 @@
 		var me = $('.gallery:nth-child(' + elementNum + ')');
 		var id = me.data("id");
 		page = $.ajax({
-			url: '/gallery_images/' + id,
+			url: '/users/1/photos/' + id,
       dataType: 'html',
 			success: function(data){
 					var stuff = ($(data).find(".stuff"));
@@ -67,6 +67,7 @@
 	if (id != lastid){
 	console.log(id);
 		page = $.ajax({
+			url: '/users/1/photos/' + id,
       dataType: 'html',
 			success: function(data){
 					var stuff = ($(data).find(".stuff"));
