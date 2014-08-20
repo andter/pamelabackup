@@ -52,7 +52,6 @@
 			url: '/users/1/photos/' + id,
       dataType: 'html',
 			success: function(data){
-					console.log(data);
 					var stuff = ($(data).find(".stuff"));
 					main.html(stuff);
 			}
@@ -65,13 +64,11 @@
 	photo.on('click', function(event){
 	var id = $(this).data("id");
 	if (id != lastid){
-	console.log(id);
 		page = $.ajax({
 			url: '/users/1/photos/' + id,
       dataType: 'html',
 			success: function(data){
 					var stuff = ($(data).find(".stuff"));
-					console.log(stuff);
 					main.html(stuff);
 			}
     });
