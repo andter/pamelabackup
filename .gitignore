@@ -18,5 +18,7 @@
 *~
 *.swo
 *.swp
+/config/initializers/fog_credentials.yml
+/config/initializers/carrierwave.rb
 
 
