@@ -16,6 +16,9 @@ gem 'carrierwave'
 gem 'bcrypt'
 gem 'mini_magick'
 gem 'fog'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 
 group :development do 
 gem "better_errors", "~> 0.0.0"
