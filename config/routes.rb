@@ -1,7 +1,7 @@
 Pamelabeckerphotography::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/help"
-  
+
   resources :posts
 	resources :sessions, only: [:create, :destroy]
   resources :messages
@@ -9,6 +9,7 @@ Pamelabeckerphotography::Application.routes.draw do
   resources :photos
   end
 
+	get 'auth/:provider/callback', to: 'omni#new'
   get "/home" => "static_pages#home"
 	get "/gallery" => "static_pages#gallery"
   get "/packages" => "static_pages#packages"

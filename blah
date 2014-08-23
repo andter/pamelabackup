@@ -1,0 +1,6 @@
+You are using a display type of 'popup' in a large browser window or tab. For a better user experience, show this dialog with our JavaScript SDK without specifying an explicit display type. The SDK will choose the best display type for each environment. Alternatively, set height and width on your window.open() call to properly size this dialog if you have special requirements precluding you from using the SDK. This message is only visible to developers of your application.
+
+drewb2u@aol.com
+10152794805154305
+mommietofive@aol.com
+10203609370388079
