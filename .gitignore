@@ -20,5 +20,8 @@
 *.swp
 /config/initializers/fog_credentials.yml
 /config/initializers/carrierwave.rb
+/public/uploads/tmp/*
 
 
+# Ignore application configuration
+/config/application.yml

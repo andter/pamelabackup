@@ -26,7 +26,8 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 			if @user.save
-				redirect_to new_user_session_path, notice: "User successfully created"
+				session[:user_id] = @user.id
+				redirect_to home_path, notice: "User successfully created"
 			else
 				@errors = @user.errors.full_messages
 				redirect_to :back, notice: "#{@errors}"
